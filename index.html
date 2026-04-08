@@ -893,9 +893,9 @@
         <p class="info-card-text">
           <span class="highlight-no">&#10007; Amantes</span> &nbsp;
           <span class="highlight-no">&#10007; Pai</span> &nbsp;
-          <span class="highlight-yes">&#10003; Pai de pet</span>
-          <span class="highlight-yes">&#10003; Conjuges</span> &nbsp;
-          <span class="highlight-yes">&#10003; Amigos</span> &nbsp;
+          <span class="highlight-yes">&#10003; Pai de pet</span> &nbsp;
+          <span class="highlight-yes">&#10003; Conjuges</span>&nbsp;
+          <span class="highlight-yes">&#10003; Amigos</span>
         </p>
       </div>
     </div>
@@ -960,6 +960,14 @@
         <div class="form-group">
           <label for="pessoas">QUANTAS PESSOAS (INCLUINDO VOCE)?</label>
           <input class="form-input" type="number" id="pessoas" name="pessoas" min="1" max="10" value="1" required>
+        </div>
+        <div class="form-group">
+          <label for="come-carne">COME CARNE ?</label>
+          <select class="form-select" id="come-carne" name="come-carne" required>
+            <option value="" disabled selected>Escolha uma opcao...</option>
+            <option value="Sim!">Sim!</option>
+            <option value="Não!">Não!</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="obs">OBSERVACAO</label>
