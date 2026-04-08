@@ -474,6 +474,12 @@
     display: block;
   }
 
+    .info-card-icon2 {
+    font-size: 20px;
+    /* margin-bottom: 10px; */
+    /* display: block; */
+  }
+
   .info-card-title {
     font-family: var(--font-pixel);
     font-size: 10px;
@@ -489,12 +495,14 @@
     line-height: 1.4;
   }
 
-  .info-card-text .highlight-yes {
+  .info-card-text .highlight-yes,
+  .guest-list .highlight-yes {
     color: var(--neon-lime);
     text-shadow: 0 0 6px rgba(57,255,20,0.4);
   }
 
-  .info-card-text .highlight-no {
+  .info-card-text .highlight-no,
+  .guest-list .highlight-no {
     color: var(--neon-red);
     text-shadow: 0 0 6px rgba(255,0,64,0.4);
     text-decoration: line-through;
@@ -503,6 +511,18 @@
 
   .info-card.full-width {
     grid-column: 1 / -1;
+  }
+
+  .guest-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+
+  .guest-list span {
+    font-family: var(--font-terminal);
+    font-size: 22px;
+    white-space: nowrap;
   }
 
   /* ============================================
@@ -890,13 +910,13 @@
       <div class="info-card full-width">
         <span class="info-card-icon">&#128101;</span>
         <h3 class="info-card-title">QUEM PODE IR?</h3>
-        <p class="info-card-text">
-          <span class="highlight-no">&#10007; Amantes</span> &nbsp;
-          <span class="highlight-no">&#10007; Pai</span> &nbsp;
-          <span class="highlight-yes">&#10003; Pai de pet</span> &nbsp;
-          <span class="highlight-yes">&#10003; Conjuges</span>&nbsp;
+        <div class="guest-list">
+          <span class="highlight-yes">&#10003; Conjuges</span>
           <span class="highlight-yes">&#10003; Amigos</span>
-        </p>
+          <span class="highlight-yes">&#10003; Pai de pet</span>
+          <span class="highlight-no">&#10007; Amantes</span>
+          <span class="highlight-no">&#10007; Pais</span>
+        </div>
       </div>
     </div>
   </section>
@@ -965,8 +985,8 @@
           <label for="come-carne">COME CARNE ?</label>
           <select class="form-select" id="come-carne" name="come-carne" required>
             <option value="" disabled selected>Escolha uma opcao...</option>
-            <option value="Sim!">Sim!</option>
-            <option value="Não!">Não!</option>
+            <option value="Sim!">Sim! <span class="info-card-icon2">&#127830;</span> </option>
+            <option value="Não!">Não! <span class="info-card-icon2">&#127807;</span></option>
           </select>
         </div>
         <div class="form-group">
